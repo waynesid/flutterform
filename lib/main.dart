@@ -7,9 +7,11 @@ import 'package:flutter_form/screen/splash_screen.dart';
 import 'package:flutter_form/screen/user_data_collection_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'firebase_options.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options:DefaultFirebaseOptions.currentPlatform);
   runApp(const CVApp());
 
 }
