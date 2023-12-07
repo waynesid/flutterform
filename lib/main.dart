@@ -7,8 +7,11 @@ import 'package:flutter_form/screen/splash_screen.dart';
 import 'package:flutter_form/screen/user_data_collection_screen.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const CVApp());
+
 }
 
 class CVApp extends StatelessWidget {

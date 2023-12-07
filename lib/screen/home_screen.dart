@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
           actions: [
             IconButton(onPressed: (){
               authProvider.signOut();
-            }, icon: Icon(Icons.logout_outlined,color: Colors.white,))
+            }, icon: const Icon(Icons.logout_outlined,color: Colors.white,))
           ],
           title: Text(
             "CV Manager",
